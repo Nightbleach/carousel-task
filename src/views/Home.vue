@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <el-button type="primary">Carousel-project with ElementUI<i class="el-icon-sunset el-icon--right"></i></el-button>
-    <el-button type="primary">Carousel-project(hand-writing)<i class="el-icon-moon-night el-icon--right"></i></el-button>
+    <el-button @click="toCarouselUi" type="primary">Carousel-project with ElementUI<i class="el-icon-sunset el-icon--right"></i></el-button>
+    <el-button @click ='toCarouselM' type="primary">Carousel-project(hand-writing)<i class="el-icon-moon-night el-icon--right"></i></el-button>
   </div>
 </template>
 
@@ -11,6 +11,14 @@
 export default {
   name: 'Home',
   components: {
+  },
+  methods: {
+    toCarouselUi () {
+      this.$router.push('/carouseElementUI')
+    },
+    toCarouselM () {
+      this.$router.push('/carouselWithoutElementUI')
+    }
   }
 }
 </script>
