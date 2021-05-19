@@ -2,7 +2,10 @@
   <div class="block">
     <el-carousel trigger="click" height="300px">
       <el-carousel-item v-for="item in slideList" :key="item">
-        <img :src="item.imgSrc" alt="">
+        <el-image
+          fit="contain"
+          :src="item.imgSrc"
+          alt=""></el-image>
       </el-carousel-item>
     </el-carousel>
   </div>
